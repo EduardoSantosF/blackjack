@@ -1,0 +1,300 @@
+body {
+  background: url(./imgs/tableBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cardBase {
+  position: relative;
+  background-image: url(./imgs/cardBase.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardBase > img {
+  width: 85%;
+  position: absolute;
+}
+
+.cardBase > img:nth-child(2) {
+  top: 2%;
+  right: -2%;
+}
+
+.cardBase > img:nth-child(3) {
+  top: -6%;
+  right: -12%;
+}
+
+.cardBase > img:nth-child(4) {
+  top: -14%;
+  right: -22%;
+}
+
+.cardBase > img:nth-child(5) {
+  top: -22%;
+  right: -32%;
+}
+
+.cardBase > img:nth-child(6) {
+  top: -30%;
+  right: -42%;
+}
+
+.cardBase > img:nth-child(7) {
+  top: -38%;
+  right: -52%;
+}
+
+.cardBase > img:nth-child(8) {
+  top: -46%;
+  right: -62%;
+}
+
+.cardBase.dealer {
+  width: 76px;
+  height: 111px;
+}
+
+.cardBase.player {
+  width: 116px;
+  height: 169px;
+}
+
+.cardBase.player::before {
+  content: '';
+  width: 116px;
+  height: 169px;
+  position: absolute;
+  background-image: url(./imgs/cardBase.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -25px;
+  right: -200px;
+  transform: rotate(-17deg);
+}
+
+.cardBase.player::after {
+  content: '';
+  width: 116px;
+  height: 169px;
+  position: absolute;
+  background-image: url(./imgs/cardBase.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -25px;
+  left: -200px;
+  transform: rotate(17deg);
+}
+
+.table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.table > h1 {
+  font-size: 48px;
+}
+
+.topTable {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  background: url(./imgs/cardSuitsBg.png);
+  background-repeat: repeat;
+  background-size: 220px;
+  border: 6px solid #FFFFFF;
+  border-top: none;
+  position: relative;
+  width: 500px;
+  height: 270px;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.deck {
+  background-image: url(./imgs/deck.png);
+  width: 75px;
+  height: 110px;
+  background-size: cover;
+  position: absolute;
+  left: 70px;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck.hidden {
+  background: transparent;
+}
+
+.deck > p {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.53);
+  border: 3px solid #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.deck button:disabled {
+  display: none;
+}
+
+.deck button:enabled ~ p {
+  display: none;
+}
+
+.deck button:hover {
+  transform: scale(1.1);
+}
+
+.deck button img {
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.53);
+  border: 3px solid #FFFFFF;
+}
+
+.score {
+  flex: 0 0 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.score > p {
+  font-size: 36px;
+  color: black;
+  width: 56px;
+  background: #FFFFFF;
+  border-radius: 21px;
+  text-align: center;
+}
+
+.score.win {
+  background: url(./imgs/win.png);
+  background-size: 45px 50px;
+  background-repeat: no-repeat;
+  background-position: 65%;
+
+}
+
+.score.lose {
+  background: url(./imgs/lose.png);
+  background-size: 45px 50px;
+  background-repeat: no-repeat;
+  background-position: 65%;
+}
+
+.botTable {
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+  width: 488px;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.botTable > img {
+  width: 140px;
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+}
+
+.gameButtons {
+  position: absolute;
+  bottom: 0;
+  right: 70px;
+  display: flex;
+}
+
+.gameButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 35px;
+  border: 4px solid #FFFFFF;
+  border-radius: 5px;
+  color: white;
+}
+
+.gameButton.draw {
+  background-color: rgb(137, 207, 31);
+  border-color: rgb(153, 255, 0);
+}
+
+.gameButton.stop {
+  background-color: rgb(214, 0, 0);
+  border-color: rgb(255, 0, 0);
+}
+
+.gameButton:active:enabled:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.gameButton:hover:enabled {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.gameButton:disabled {
+  background-color: rgba(61, 61, 61, 0.473);
+  color: rgba(61, 61, 61, 0.473);
+  border-color: rgba(61, 61, 61, 0.473);
+}
+
+.gameButton:disabled:hover {
+  cursor: not-allowed;
+}

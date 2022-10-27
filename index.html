@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="table">
+    <div class="topTable">
+      <div class="deck hidden" id="deck-shuffled">
+        <button id="start-game-button">
+          <img src="./src/imgs/shuffle.png" alt="shuffle button">
+        </button>
+        <p id="deck-remaining-cards"></p>
+      </div>
+      <div class="cardBase dealer" id="player-2-pile"></div>
+      <div class="score dealer result" id="player-2-result">
+        <p id="player-2-score">0</p>
+      </div>
+    </div>
+    <h1>BLACKJACK</h1>
+    <div class="botTable">
+      <div class="cardBase player" id="player-1-pile"></div>
+      <div class="gameButtons">
+        <button class="gameButton draw" id="draw-card-button" disabled>+</button>
+        <button class="gameButton stop" id="stop-game-button" disabled>-</button>
+      </div>
+      <div class="cardBase extra right"></div>
+      <div class="score player" id="player-1-result">
+        <p id="player-1-score">0</p>
+      </div>
+      <img src="./src/imgs/chips.png" alt="casino chips">
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
